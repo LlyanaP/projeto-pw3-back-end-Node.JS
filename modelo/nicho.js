@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 
 const connection = require('../database/database.js');
 
-const modelCategoria = connection.define(
+const modelCategoriaNicho = connection.define(
     'tbl_categoria_nicho',
     {
         cod_categoria_nicho:{
@@ -12,11 +12,12 @@ const modelCategoria = connection.define(
         },
         nome_categoria_nicho:{
             type:Sequelize.STRING(100),
-            allowNull:true
+            allowNull:true,
+            unique: true
         }
     }
 );
 
-modelCategoria.sync({force:true});
+// modelCategoriaNicho.sync({force:true});
 
-module.exports = modelCategoria;
+module.exports = modelCategoriaNicho;
