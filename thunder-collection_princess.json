@@ -1,0 +1,40 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "princess",
+    "collectionId": "b763c999-8993-4d14-9acc-95f8b236e3f9",
+    "dateExported": "2024-10-17T21:07:31.089Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "0a21d5e9-4678-4386-98ea-8809f0234e7c",
+            "colId": "b763c999-8993-4d14-9acc-95f8b236e3f9",
+            "containerId": "",
+            "name": "cadastraAvaliação",
+            "url": "http://localhost:5000/listagemDeProdutos",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-10-17T19:56:10.249Z",
+            "modified": "2024-10-17T19:56:56.166Z",
+            "headers": []
+        },
+        {
+            "_id": "d82d0153-b41d-4aa8-af8d-51e3d232186c",
+            "colId": "b763c999-8993-4d14-9acc-95f8b236e3f9",
+            "containerId": "",
+            "name": "inserirAvaliação",
+            "url": "http://localhost:5000/cadastroAvalie",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-10-17T19:58:32.156Z",
+            "modified": "2024-10-17T20:14:55.411Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"produto\":\"Óleo Milagroso Queratina Pantene\",\n  \"marca\":\"Pantene\",\n  \"ean\":\"7500435240512\",\n  \"utilizacaoCorreta\":\"Aplicar uma quantidade do tamanho de uma moeda espalhar nas mãos e passar do comprimento as pontas do cabelo\",\n  \"usoPessoal\":\"Eu Adorei! O cabelo fica muito macio, ajuda muito no Day After\",\n  \"dica\":\"Misture o óleo pantene junto com um Leve-In na hora de aplicar no cabelo\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "dTlnLBlmCXuwkXuCcwfTNwIFZ5tZcRUV2Uc28ODQQjJg_I3xko4ncS_UBS_M93bnHeO6lBuIC4MOwP-jZZ-aYQ"
+}
