@@ -17,6 +17,6 @@ app.use('/', routerAvalie);
 app.use('/', routerCadastroAvalia);
 app.use('/', routerNicho)
 
-app.listen(5000, ()=>{
-    console.log('SERVIDOR RODANDO EM - http://localhost:5000');
+app.listen(5001, ()=>{
+    console.log('SERVIDOR RODANDO EM - http://localhost:5001');
 });

@@ -11,28 +11,28 @@ const modelCadastroAvalia = connection.define(
             autoIncrement:true
         },
         produto:{
-            type:Sequelize.STRING(100),
+            type:Sequelize.STRING(60),
             allowNull:true
         },
         marca:{
-            type:Sequelize.STRING(100),
+            type:Sequelize.STRING(60),
             allowNull:true
         },
         ean:{
-            type:Sequelize.STRING(100),
+            type:Sequelize.STRING(13),
             allowNull:true,
             unique: true
         },
         utilizacaoCorreta:{
-            type:Sequelize.STRING(100),
+            type:Sequelize.STRING(250),
             allowNull:true
         },
         usoPessoal:{
-            type:Sequelize.STRING(100),
+            type:Sequelize.STRING(250),
             allowNull:true
         },
         dica:{
-            type:Sequelize.STRING(100),
+            type:Sequelize.STRING(250),
             allowNull:true
         }
     }

@@ -1,0 +1,59 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "princess",
+    "collectionId": "f1ea65be-64a6-43a1-89f3-f763462be66b",
+    "dateExported": "2024-10-18T01:23:28.134Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8ea33dbf-26e6-4198-b171-7e0cae125810",
+            "colId": "f1ea65be-64a6-43a1-89f3-f763462be66b",
+            "containerId": "",
+            "name": "inserir",
+            "url": "http://localhost:5001/CadastroAvalie",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-10-18T01:14:45.115Z",
+            "modified": "2024-10-18T01:16:59.941Z",
+            "headers": []
+        },
+        {
+            "_id": "a6f491e6-21af-45a4-b84f-ef001117cf24",
+            "colId": "f1ea65be-64a6-43a1-89f3-f763462be66b",
+            "containerId": "",
+            "name": "listarCadastro",
+            "url": "http://localhost:5001/listagemDeProdutos",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-10-18T01:18:02.346Z",
+            "modified": "2024-10-18T01:18:27.448Z",
+            "headers": []
+        },
+        {
+            "_id": "2f38ea76-3b7e-4d06-8628-8b99e7da0dd7",
+            "colId": "f1ea65be-64a6-43a1-89f3-f763462be66b",
+            "containerId": "",
+            "name": "nicho",
+            "url": "http://localhost:5001/listagemDeNicho",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-10-18T01:20:40.376Z",
+            "modified": "2024-10-18T01:21:23.424Z",
+            "headers": []
+        },
+        {
+            "_id": "17f5cfc5-f5c7-4eed-991b-ad54112609b4",
+            "colId": "f1ea65be-64a6-43a1-89f3-f763462be66b",
+            "containerId": "",
+            "name": "EmogiAvalia",
+            "url": "http://localhost:5001/avalie",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-10-18T01:20:59.287Z",
+            "modified": "2024-10-18T01:22:25.279Z",
+            "headers": []
+        }
+    ],
+    "ref": "JZdseSbN8afQF3FDpxwYG4vflvOGR4QHeMLgRRUa6_nABeHFRbLsjIQN03FyrvX1lwuO2kEns6c8EKis6KeLYQ"
+}

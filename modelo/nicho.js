@@ -11,7 +11,7 @@ const modelCategoriaNicho = connection.define(
             autoIncrement:true
         },
         nome_categoria_nicho:{
-            type:Sequelize.STRING(100),
+            type:Sequelize.STRING(60),
             allowNull:true,
             unique: true
         }

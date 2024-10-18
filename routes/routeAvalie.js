@@ -4,7 +4,7 @@ const modelAvalie = require('../modelo/avalie.js');
 
 const router = express.Router();
 
-router.get('/Avalie', (req, res)=>{
+router.get('/avalie', (req, res)=>{
 
     modelAvalie.findAll()
     .then(

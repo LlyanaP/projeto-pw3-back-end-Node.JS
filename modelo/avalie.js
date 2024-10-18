@@ -11,7 +11,7 @@ const modelAvalie = connection.define(
             autoIncrement:true
         },
         nome_avalie:{
-            type:Sequelize.STRING(100),
+            type:Sequelize.STRING(6),
             allowNull:true
         }
     }
