@@ -2,6 +2,11 @@ const Sequelize = require('sequelize');
 
 const connection = require('../database/database.js');
 
+const modelAvalie = require('./avalie.js')
+
+const modelCategoriaNicho = require('./nicho.js');
+const { FOREIGNKEYS } = require('sequelize/lib/query-types');
+
 const modelCadastroAvalia = connection.define(
     'tbl_cadastro_avalia',
     {
@@ -38,6 +43,28 @@ const modelCadastroAvalia = connection.define(
     }
 );
 
-// modelCadastroAvalia.sync({force:true});
+modelAvalie.hasMany(modelCadastroAvalia,{
+    foreignKey: 'cod_avalie',
+    sourceKey: 'cod_avalie'
+})
+
+modelCadastroAvalia.belongsTo(modelAvalie,{
+    foreignKey: 'cod_avalie',
+    sourceKey: 'cod_avalie'
+})
+
+modelCategoriaNicho.hasMany(modelCadastroAvalia,{
+    foreignKey: 'cod_categoria_nicho',
+    sourceKey:'cod_categoria_nicho'
+})
+
+modelCadastroAvalia.belongsTo(modelCategoriaNicho,{
+    foreignKey: 'cod_categoria_nicho',
+    sourceKey: 'cod_categoria_nicho'
+})
+
+
+
+modelCadastroAvalia.sync({force:true});
 
 module.exports = modelCadastroAvalia;
