@@ -32,16 +32,18 @@ router.get('/listagemDeProdutos',(req,res)=>{
 });
 
 router.post('/cadastroAvalie', (req,res)=> {
-    let {produto, marca, ean, utilizacaoCorreta, usoPessoal, dica} = req.body;
+    let {produto, marca, ean, utilizacaoCorreta, usoPessoal, dica, cod_categoria_nicho, cod_avalie} = req.body;
 
     modelCadastroAvalie.create(
         {
             produto,
             marca,
             ean,
+            cod_categoria_nicho,
             utilizacaoCorreta,
             usoPessoal,
-            dica
+            dica,
+            cod_avalie
         }
     )
     .then(
@@ -50,6 +52,8 @@ router.post('/cadastroAvalie', (req,res)=> {
                 {
                     errorStatus:false,
                     mensageStatus: 'Avaliação do Produto Cadastrada com Sucesso'
+                    
+
                     
                 }
             );
@@ -65,4 +69,31 @@ router.post('/cadastroAvalie', (req,res)=> {
         );
     });
     
+});
+
+router.get('/detalheList/:cod_cadastro_avalia', (req, res)=>{
+
+    let { cod_cadastro_avalia } = req.params;
+
+    modelCadastroAvalie.findByPk(cod_cadastro_avalia)
+    .then(
+        (response)=>{
+            return res.status(201).json(
+                {
+                    errorStatus:false,
+                    mensageStatus:'Produto Acessado com sucesso',
+                    data:response
+                }
+            );
+        }
+    )
+    .catch((error)=>{
+        return res.status(400).json(
+            {
+                errorStatus:true,
+                mensageStatus:'Ocorreu um Erro Ao Acessar o Produto',
+                errorObject:error
+            }
+        );
+    });
 });

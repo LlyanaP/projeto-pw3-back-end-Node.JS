@@ -65,6 +65,6 @@ modelCadastroAvalia.belongsTo(modelCategoriaNicho,{
 
 
 
-modelCadastroAvalia.sync({force:true});
+// modelCadastroAvalia.sync({force:true});
 
 module.exports = modelCadastroAvalia;
