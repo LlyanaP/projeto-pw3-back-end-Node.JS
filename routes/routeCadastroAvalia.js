@@ -97,3 +97,30 @@ router.get('/detalheList/:cod_cadastro_avalia', (req, res)=>{
         );
     });
 });
+
+router.delete('/delete/:cod_cadastro_avalia', (req, res)=>{
+
+    let { cod_cadastro_avalia } = req.params;
+
+    modelCadastroAvalie.destroy(
+        {where:{cod_cadastro_avalia}}
+    ).then(
+        ()=>{
+            return res.status(201).json(
+                {
+                    errorStatus:false,
+                    mensageStatus:'Avaliação Excluida com Sucesso'
+                }
+            );
+        }
+    )
+    .catch((error)=>{
+        return res.status(400).json(
+            {
+                errorStatus:true,
+                mensageStatus:'Ocorreu Um Erro Ao Excluir Avaliação',
+                errorObject:error
+            }
+        );
+    });
+});
