@@ -81,7 +81,7 @@ router.get('/detalheList/:cod_cadastro_avalia', (req, res)=>{
             return res.status(201).json(
                 {
                     errorStatus:false,
-                    mensageStatus:'Produto Acessado com sucesso',
+                    mensageStatus:'Sucesso!! Produto Acessado',
                     data:response
                 }
             );
@@ -91,7 +91,7 @@ router.get('/detalheList/:cod_cadastro_avalia', (req, res)=>{
         return res.status(400).json(
             {
                 errorStatus:true,
-                mensageStatus:'Ocorreu um Erro Ao Acessar o Produto',
+                mensageStatus:'Erro!! Houve Um Erro Ao Acessar Avaliação',
                 errorObject:error
             }
         );
@@ -109,7 +109,7 @@ router.delete('/delete/:cod_cadastro_avalia', (req, res)=>{
             return res.status(201).json(
                 {
                     errorStatus:false,
-                    mensageStatus:'Avaliação Excluida com Sucesso'
+                    mensageStatus:'Sucesso!! Avaliação Excluida com Sucesso'
                 }
             );
         }
@@ -118,9 +118,44 @@ router.delete('/delete/:cod_cadastro_avalia', (req, res)=>{
         return res.status(400).json(
             {
                 errorStatus:true,
-                mensageStatus:'Ocorreu Um Erro Ao Excluir Avaliação',
+                mensageStatus:'Erro!! Houve Um Erro Ao Excluir Avaliação',
                 errorObject:error
             }
         );
     });
 });
+
+router.put('/editarAvaliacao', (req, res)=>{
+
+    let {cod_cadastro_avalia, produto, marca, ean, utilizacaoCorreta, usoPessoal, dica} = req.body;
+    
+        modelCadastroAvalie.update(
+            {
+                produto,
+                marca,
+                ean,
+                utilizacaoCorreta,
+                usoPessoal,
+                dica,
+            },
+            {where:{cod_cadastro_avalia}}
+        ).then(
+            ()=>{
+                return res.status(201).json(
+                    {
+                        errorStatus:false,
+                        mensageStatus:'Sucesso!! Avaliação Alterada!'
+                    }
+                );
+            }
+        )
+        .catch((error)=>{
+            return res.status(400).json(
+                {
+                    errorStatus:true,
+                    mensageStatus:'Erro!! Houve Um Erro Ao Editar Avaliação',
+                    errorObject:error
+                }
+            );
+        });
+    });
